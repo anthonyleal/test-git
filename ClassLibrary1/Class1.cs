@@ -9,7 +9,6 @@ namespace ClassLibrary1
         {
             Console.Write("How many employees will be registered? ");
             int n = int.Parse(Console.ReadLine());
-
             List<Employee> list = new List<Employee>();
 
             for(int i = 1; i <= n; i++)
@@ -21,15 +20,12 @@ namespace ClassLibrary1
                 string name = Console.ReadLine();
                 Console.Write("Salary: ");
                 double salary = double.Parse(Console.ReadLine());
-
                 list.Add(new Employee(id, name, salary));
-
                 Console.WriteLine();
             }
 
             Console.Write("Enter the employee id that will have salary increase : ");
             int searchId = int.Parse(Console.ReadLine());
-
             Employee emp = list.Find(x => x.Id == searchId);
             
             if(emp == null)
@@ -48,7 +44,6 @@ namespace ClassLibrary1
             {
                 Console.WriteLine(obj);
             }
-
         }
     }
 }
